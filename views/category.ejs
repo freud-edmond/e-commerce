@@ -1,0 +1,7 @@
+<% include layout %>
+<h1>Catégorie : <%= type %></h1>
+<ul>
+  <% items.forEach(item => { %>
+    <li><strong><%= item.nom %></strong> - <%= item.prix %></li>
+  <% }) %>
+</ul>

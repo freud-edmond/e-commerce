@@ -1,0 +1,34 @@
+{
+  "homme": [
+    {
+      "id": 1,
+      "nom": "T-shirt Homme",
+      "prix": "20€",
+      "description": "Un t-shirt confortable en coton pour homme.",
+      "image": "/img/tshirt-homme.jpg"
+    },
+    {
+      "id": 2,
+      "nom": "Jean Slim",
+      "prix": "40€",
+      "description": "Jean slim moderne pour homme.",
+      "image": "/img/jean-slim.jpg"
+    }
+  ],
+  "femme": [
+    {
+      "id": 3,
+      "nom": "Robe d'été",
+      "prix": "30€",
+      "description": "Robe légère idéale pour l'été.",
+      "image": "/img/robe-ete.jpg"
+    },
+    {
+      "id": 4,
+      "nom": "Jupe en jean",
+      "prix": "25€",
+      "description": "Jupe courte en jean tendance.",
+      "image": "/img/jupe-jean.jpg"
+    }
+  ]
+}
