@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "short homme",
+    "category": "homme",
+    "description": "short de sport",
+    "price": 49.99,
+    "image": "short.jpg"
+  },
+  {
+    "id": 2,
+    "name": "short homme",
+    "category": "homme",
+    "description": "short de plage pour homme",
+    "price": 29.99,
+    "image": "short.jpeg"
+  },
+  
+  {
+    "id": 3,
+    "name": "maillot",
+    "category": "homme",
+    "description": "maillot de foot",
+    "price": 100.99,
+    "image": "maillot.jpeg"
+  },
+  
+  {
+    "id": 4,
+    "name": "culotte",
+    "category": "homme",
+    "description": "culotte home",
+    "price": 100.99,
+    "image": "culotte.jpg"
+  },
+  
+  {
+    "id": 1,
+    "name": "Robe femme",
+    "category": "femme",
+    "description": "Robe chic pour femme",
+    "price": 129.99,
+    "image": "robe.webp"
+  },
+
+
+{
+    "id": 2,
+    "name": "jupe femme",
+    "category": "femme",
+    "description": "jupe de soleil pour éte",
+    "price": 80,
+    "image": "jupe.jpg"
+  },
+
+
+{
+    "id": 3,
+    "name": "chemise femme",
+    "category": "femme",
+    "description": "chemise de soirée ",
+    "price": 40,
+    "image": "chemise.jpg"
+  },
+{
+    "id": 4,
+    "name": "robe femme",
+    "category": "femme",
+    "description": "robe valerine grande taille",
+    "price": 120,
+    "image": "robe.jpg"
+  }
+
+
+
+
+]

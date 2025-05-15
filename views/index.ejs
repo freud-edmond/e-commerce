@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accueil</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Bienvenue sur notre site e-commerce</h1>
+  <p>Choisissez une catégorie pour commencer vos achats :</p>
+  <ul>
+    <% categories.forEach(cat => { %>
+      <li><a href="/categorie/<%= cat %>"><%= cat %></a></li>
+    <% }) %>
+  </ul>
+
+  <footer>&copy; 2025 Mon E-Commerce</footer>
+
+
+
+</body>
+</html>

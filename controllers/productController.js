@@ -1,46 +1,28 @@
-const  productController = {
-    showHome : (req ,res) =>{
-        res.render('app')
-    },
- 
- 
- 
-}
- 
-module.exports = productController// const fs = require('fs');
-// const path = require('path');
+const fs = require('fs');
+const path = require('path');
 
-// const dataPath = path.join(__dirname, '../data/products.json');
+// Charger les produits une seule fois
+const products = JSON.parse(fs.readFileSync(path.join(__dirname, '../products.json')));
 
-// function getProducts() {
-//   const data = fs.readFileSync(dataPath);
-//   return JSON.parse(data);
-// }
+// Page d'accueil : afficher les catégories
+exports.showHome = (req, res) => {
+  const categories = [...new Set(products.map(p => p.category))];
+  res.render('index', { categories });
+};
 
-// exports.showHome = (req, res) => {
-//   res.render('app.ejs', { title: 'Accueil' });
-// };
+// Page de catégorie : afficher les produits d'une catégorie
+exports.showCategory = (req, res) => {
+  const category = req.params.category;
+  const filteredProducts = products.filter(p => p.category === category);
+  res.render('category', { category, products: filteredProducts });
+};
 
-// exports.showCategory = (req, res) => {
-//   const { type } = req.params;
-//   const products = getProducts();
-//   const items = products[type] || [];
-//   res.render('category', { title: `Catégorie ${type}`, type, items });
-// };
-
-// exports.showProduct = (req, res) => {
-//   const { id } = req.params;
-//   const products = getProducts();
-//   let found = null;
-
-//   for (const category in products) {
-//     found = products[category].find(prod => prod.id == id);
-//     if (found) break;
-//   }
-
-//   if (found) {
-//     res.render('product', { title: found.nom, product: found });
-//   } else {
-//     res.status(404).send('Produit non trouvé');
-//   }
-// };
+// Page d’un produit : afficher les détails
+exports.showProduct = (req, res) => {
+  const id = parseInt(req.params.id);
+  const product = products.find(p => p.id === id);
+  if (!product) {
+    return res.status(404).send('Produit non trouvé');
+  }
+  res.render('product', { product });
+};
